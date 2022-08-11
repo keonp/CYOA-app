@@ -5,3 +5,30 @@ html { box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.imageContainer {
+    width: 100px;
+}
+
+h1,
+p,
+input,
+fieldset {
+    margin: 0;
+    padding: 0;
+}

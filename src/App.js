@@ -20,7 +20,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App wrapper">
       {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
       {display ||
         <LandingPage

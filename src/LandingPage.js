@@ -1,4 +1,4 @@
-import Introduction from './Introduction.js';
+import IntroductionPage from './IntroductionPage.js';
 
 function LandingPage({setDisplay, username, handleUsernameInput}) {
     return(
@@ -8,7 +8,7 @@ function LandingPage({setDisplay, username, handleUsernameInput}) {
             <form>
                 <label htmlFor="name">Enter your [user]name</label>
                 <input type="text" id="name" name="name" onChange={handleUsernameInput} required/>
-                <button type="submit" onClick={() => setDisplay(<Introduction setDisplay={setDisplay} username={username}/>)}>Confirm</button>
+                <button type="submit" onClick={() => setDisplay(<IntroductionPage setDisplay={setDisplay} username={username}/>)}>Confirm</button>
             </form>
         </div>
     )

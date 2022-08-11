@@ -1,6 +1,6 @@
-import Main from './Main.js';
+import MainPage from './MainPage.js';
 
-function Introduction({setDisplay, username}) {
+function IntroductionPage({setDisplay, username}) {
     return(
         <div>
             <h1>Introduction</h1>
@@ -9,10 +9,10 @@ function Introduction({setDisplay, username}) {
             <p>I hate to be a burden, but do you think you could help us by slaying the dragon? If you don't have the necessary equipment, I can tell you where to go to get what you need</p>
             <p>What do you say?</p>
 
-            <button onClick={() => setDisplay(<Main username={username} setDisplay={setDisplay} />)}>Sure</button>
-            <button onClick={() => setDisplay(<Main username={username} setDisplay={setDisplay} />)}>Heck Yea!</button>
+            <button onClick={() => setDisplay(<MainPage username={username} setDisplay={setDisplay} />)}>Sure</button>
+            <button onClick={() => setDisplay(<MainPage username={username} setDisplay={setDisplay} />)}>Heck Yea!</button>
         </div>
     )
 }
 
-export default Introduction;
+export default IntroductionPage;

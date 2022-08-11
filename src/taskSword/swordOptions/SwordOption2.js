@@ -1,4 +1,4 @@
-import Main from "../../Main.js";
+import MainPage from "../../MainPage.js";
 
 function SwordOption2() {
 
