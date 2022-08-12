@@ -1,7 +1,7 @@
 import MainPage from "../../MainPage.js";
 import woodenSword from "../../assets/swords/wooden_sword.png";
 
-function SwordOption3({setDisplay, username, setSword}) {
+function SwordOption3({setDisplay, username, sword}) {
     // let missingLetter;
     // function nameScrambled(username) {
     //     let newName = [...username];
@@ -12,7 +12,7 @@ function SwordOption3({setDisplay, username, setSword}) {
     //     newName.join('');
     //     return newName;
     // }
-    setSword('Wooden Sword');
+    // setSword('Wooden Sword');
     return(
         <div>
             <h1>Objective: Obtain the Dragon Long Sword</h1>
@@ -21,13 +21,13 @@ function SwordOption3({setDisplay, username, setSword}) {
             <p> Smiley is absolutely wrong. This is unbelievable..and you call yourself an adventurer? What's your rank anyhow? C? D? Oh oh, maybe F! You lot like to run around playing with weapons that you have no business carrying around. Here..take this and when you acquire some respect for our work, then maybe I'll make you a <span className="dragonLongSword">Dragon Long Sword</span>. For now, walk around with this <span className="woodenSword">Wooden Sword</span>.</p>
 
             <div className="imageContainer">
-                <img src={woodenSword} alt="image of a wooden sword"/>
+                <img src={woodenSword} alt="wooden sword"/>
             </div>
             
             <button
                 onClick={() => {
-                    setDisplay(<MainPage username={username} setDisplay={setDisplay}/>)
-                    setSword('Wooden Sword')}
+                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} />)
+                    }
                 }
             >Return to the Main page</button>
         </div>

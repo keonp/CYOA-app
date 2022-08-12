@@ -25,6 +25,11 @@ img {
     width: 100px;
 }
 
+.username {
+    color: #d3b924;
+    font-weight: bold;
+}
+
 .woodenSword {
     color: #58bee0;
     font-weight: bold;

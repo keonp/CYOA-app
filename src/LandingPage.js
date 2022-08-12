@@ -1,6 +1,6 @@
 import IntroductionPage from './IntroductionPage.js';
 
-function LandingPage({setDisplay, username, handleUsernameInput, setSword}) {
+function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput}) {
     return(
         <div>
             <h1>Greetings!</h1>
@@ -8,7 +8,7 @@ function LandingPage({setDisplay, username, handleUsernameInput, setSword}) {
             <form>
                 <label htmlFor="name">Enter your [user]name</label>
                 <input type="text" id="name" name="name" onChange={handleUsernameInput} required/>
-                <button type="submit" onClick={() => setDisplay(<IntroductionPage setDisplay={setDisplay} username={username} setSword={setSword}/>)}>Confirm</button>
+                <button type="submit" onClick={() => setDisplay(<IntroductionPage setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} />)}>Confirm</button>
             </form>
         </div>
     )

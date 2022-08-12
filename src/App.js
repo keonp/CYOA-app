@@ -9,22 +9,18 @@ function App() {
   const [display, setDisplay] = useState('');
 
   const [username, setUsername] = useState('Player 1');
-  const [sword, setSword] = useState('');
+  const [sword, setSword] = useState(false);
   
-  // const pushUsername = (usersName) {
-
-  // }
-
   // useEffect will re-render the page once display(state) is updated
   useEffect(() => {
-
+    // console.log(display);
   }, [display]);
 
   const handleUsernameInput = (e) => {
     setUsername(e.target.value || 'Player 1');
   }
 
-
+  // console.log(sword);
   return (
     <div className="App wrapper">
       {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
@@ -32,6 +28,7 @@ function App() {
         <LandingPage
           setDisplay={setDisplay}
           username={username}
+          sword={sword}
           setSword={setSword}
           handleUsernameInput={handleUsernameInput}
         />}
