@@ -31,8 +31,8 @@ function App() {
       {display ||
         <LandingPage
           setDisplay={setDisplay}
-          setSword={setSword}
           username={username}
+          setSword={setSword}
           handleUsernameInput={handleUsernameInput}
         />}
     </div>
