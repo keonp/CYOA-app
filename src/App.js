@@ -7,7 +7,13 @@ import LandingPage from './LandingPage.js';
 function App() {
   // useState variable will hold components to be rendered on page
   const [display, setDisplay] = useState('');
+
   const [username, setUsername] = useState('Player 1');
+  const [sword, setSword] = useState('');
+  
+  // const pushUsername = (usersName) {
+
+  // }
 
   // useEffect will re-render the page once display(state) is updated
   useEffect(() => {
@@ -25,6 +31,7 @@ function App() {
       {display ||
         <LandingPage
           setDisplay={setDisplay}
+          setSword={setSword}
           username={username}
           handleUsernameInput={handleUsernameInput}
         />}

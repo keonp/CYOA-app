@@ -25,6 +25,16 @@ img {
     width: 100px;
 }
 
+.woodenSword {
+    color: #58bee0;
+    font-weight: bold;
+}
+
+.dragonLongSword {
+    color: #800000;
+    font-weight: bold;
+}
+
 h1,
 p,
 input,
