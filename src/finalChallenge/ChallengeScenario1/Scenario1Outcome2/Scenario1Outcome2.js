@@ -1,6 +1,6 @@
 import BadEndPage from "../../../BadEndPage.js";
 
-function ChallengeS1Option1Outcome({setDisplay, username, sword}) {
+function Scenario1Outcome2({setDisplay, username, sword}) {
     return(
         <div>
             <h1>Objective: Say your prayers..</h1>
@@ -16,4 +16,4 @@ function ChallengeS1Option1Outcome({setDisplay, username, sword}) {
     )
 }
 
-export default ChallengeS1Option1Outcome;
+export default Scenario1Outcome2;
