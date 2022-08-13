@@ -1,5 +1,5 @@
-import ChallengeS1Option1 from "./ChallengeScenario1/ChallengeS1Option1.js";
-import ChallengeS1Option2 from "./ChallengeScenario1/ChallengeS1Option2.js";
+import ChallengeS1 from "./ChallengeScenario1/ChallengeS1.js";
+import ChallengeS2 from "./ChallengeScenario2/ChallengeS2.js";
 
 function Challenge({setDisplay, username, sword}) {
     return (
@@ -9,14 +9,14 @@ function Challenge({setDisplay, username, sword}) {
             
             <button
                 onClick={() => {
-                    setDisplay(<ChallengeS1Option1 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<ChallengeS1 username={username} setDisplay={setDisplay} sword={sword}/>)
                 }
             }
-            >Pull out your <span className="dragonLongSword">{sword}</span>!</button>
+            >Pull out your <span className={sword === 'Dragon Long Sword' ? 'dragonLongSword' : 'woodenSword'}>{sword}</span>!</button>
 
             <button
                 onClick={() => {
-                    setDisplay(<ChallengeS1Option2 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<ChallengeS2 username={username} setDisplay={setDisplay} sword={sword}/>)
                 }
             }
             >Jump backwards!</button>
