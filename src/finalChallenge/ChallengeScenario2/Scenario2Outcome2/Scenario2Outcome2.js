@@ -11,15 +11,17 @@ function Scenario2Outcome2({setDisplay, username, sword}) {
             
             {
                 sword === 'Dragon Long Sword' ?
-                
-                <button onClick={() => {
-                    setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword}/>)
-                }}
+
+                <button
+                    onClick={() => {
+                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword}/>)
+                    }}
                 >Lunge with your <span className="dragonLongSword">{sword}</span> </button> :
 
-                <button onClick={() => {
-                    setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword}/>)
-                }}
+                <button 
+                    onClick={() => {
+                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword}/>)
+                    }}
                 >Lunge with your <span className="woodenSword">{sword}</span> </button>
             }
 

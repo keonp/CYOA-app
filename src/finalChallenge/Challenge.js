@@ -1,7 +1,7 @@
 import ChallengeS1 from "./ChallengeScenario1/ChallengeS1.js";
 import ChallengeS2 from "./ChallengeScenario2/ChallengeS2.js";
 
-function Challenge({setDisplay, username, sword}) {
+function Challenge({setDisplay, username, sword, riddle, handleRiddleInput}) {
     return (
         <div>
             <h1>Objective: Defeat the Dragon!</h1>
@@ -16,7 +16,7 @@ function Challenge({setDisplay, username, sword}) {
 
             <button
                 onClick={() => {
-                    setDisplay(<ChallengeS2 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<ChallengeS2 username={username} setDisplay={setDisplay} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
                 }
             }
             >Jump backwards!</button>
