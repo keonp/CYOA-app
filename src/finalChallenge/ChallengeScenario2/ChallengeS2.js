@@ -16,18 +16,27 @@ function ChallengeS2({setDisplay, username, sword, riddle, handleRiddleInput}) {
 
             <p>The dragon snarls and says, "Why?! You humans lay waste to your environment and disrupt the state of nature! Your little livestock emit methane in quantities so large that it warms the planet's temperature dramatically! You are at constant war with one another and are bent on making sure you are the dominant species in a world with many other intelligent species! What I do to you people is a service really...you should be thanking me. Your arrogance and lack of intelligence will forever prove your undoing, human.</p>
 
-            <button>Draw your <span className={sword === 'Dragon Long Sword' ? 'dragonLongSword' : 'woodenSword'}>{sword}</span></button>
-
+            {/* <button>Draw your <span className={sword === 'Dragon Long Sword' ? 'dragonLongSword' : 'woodenSword'}>{sword}</span></button> */}
 
             <button 
                 onClick={() => {
-                    setDisplay(<Scenario2Outcome2 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<Scenario2Outcome2
+                        username={username}
+                        setDisplay={setDisplay}
+                        sword={sword}
+                    />)
                 }}
             >Wait, what's methane?</button>
 
             <button 
                 onClick={() => {
-                    setDisplay(<Scenario2Outcome3 username={username} setDisplay={setDisplay} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
+                    setDisplay(<Scenario2Outcome3
+                        username={username}
+                        setDisplay={setDisplay}
+                        sword={sword}
+                        riddle={riddle}
+                        handleRiddleInput={handleRiddleInput}
+                    />)
                 }}
             >We can be smart too!</button>
             

@@ -1,6 +1,7 @@
 import IntroductionPage from './IntroductionPage.js';
+import Scenario2Outcome3 from './finalChallenge/ChallengeScenario2/Scenario2Outcome3/Scenario2Outcome3.js';
 
-function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, riddle, handleRiddleInput}) {
+function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, riddle, handleRiddleInput, addUser}) {
     return(
         <div>
             <h1>Greetings!</h1>
@@ -8,7 +9,19 @@ function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput
             <form>
                 <label htmlFor="name">Enter your [user]name</label>
                 <input type="text" id="name" name="name" onChange={handleUsernameInput}/>
-                <button type="submit" onClick={() => setDisplay(<IntroductionPage setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)}>Confirm</button>
+
+                <button type="submit" onClick={() => 
+                        setDisplay(<IntroductionPage
+                            setDisplay={setDisplay}
+                            username={username}
+                            sword={sword}
+                            setSword={setSword}
+                            riddle={riddle}
+                            handleRiddleInput={handleRiddleInput}
+                            addUser={addUser}
+                        />)
+                    }
+                >Confirm</button>
             </form>
         </div>
     )
