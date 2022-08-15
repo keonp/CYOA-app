@@ -2,7 +2,7 @@ import SwordOption1 from "./swordOptions/SwordOption1.js";
 import SwordOption2 from "./swordOptions/SwordOption2.js";
 import SwordOption3 from "./swordOptions/SwordOption3.js";
 
-function Sword({setDisplay, username, sword, setSword, riddle, handleRiddleInput}) {
+function Sword({setDisplay, username, sword, setSword}) {
     return(
         <div>
             <h1>Objective: Obtain the Dragon Long Sword</h1>
@@ -11,7 +11,7 @@ function Sword({setDisplay, username, sword, setSword, riddle, handleRiddleInput
             <button
                 onClick={() => {
                     setSword('Wooden Sword')
-                    setDisplay(<SwordOption1 setDisplay={setDisplay}  username={username} sword='Wooden Sword' riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
+                    setDisplay(<SwordOption1 setDisplay={setDisplay}  username={username} sword='Wooden Sword'/>)
                     }
                 }
             > Gleeful</button>
@@ -20,7 +20,7 @@ function Sword({setDisplay, username, sword, setSword, riddle, handleRiddleInput
             <button
                 onClick={() =>{
                     setSword('Dragon Long Sword')
-                    setDisplay(<SwordOption2 username={username} setDisplay={setDisplay} sword='Dragon Long Sword' riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
+                    setDisplay(<SwordOption2 username={username} setDisplay={setDisplay} sword='Dragon Long Sword'/>)
                     }
                 }
             >Doc</button>
@@ -28,7 +28,7 @@ function Sword({setDisplay, username, sword, setSword, riddle, handleRiddleInput
             <button
                 onClick={() => {
                     setSword('Wooden Sword')
-                    setDisplay(<SwordOption3 username={username} setDisplay={setDisplay} sword='Wooden Sword' riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
+                    setDisplay(<SwordOption3 username={username} setDisplay={setDisplay} sword='Wooden Sword'/>)
                     }
                 }
             >Smiley</button>

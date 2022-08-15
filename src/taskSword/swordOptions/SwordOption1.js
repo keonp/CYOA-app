@@ -3,7 +3,7 @@ import woodenSword from "../../assets/swords/wooden_sword.png";
 
 
 
-function SwordOption1({setDisplay, username, sword, riddle, handleRiddleInput}) {
+function SwordOption1({setDisplay, username, sword}) {
     
     return(
         <div>
@@ -17,7 +17,7 @@ function SwordOption1({setDisplay, username, sword, riddle, handleRiddleInput}) 
             
             <button
                 onClick={() => {
-                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
+                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword}/>)
                     }
                 }
             >Return to the Main page</button>

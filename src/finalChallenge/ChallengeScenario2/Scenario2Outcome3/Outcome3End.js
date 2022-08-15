@@ -3,11 +3,10 @@ import BadEndPage from "../../../BadEndPage.js";
 
 
 function Outcome3End({setDisplay, username, sword, riddle}) {
-    // const riddle = riddleProp;
-    // console.log(riddle)
     return(
         <div>
             <h1>Objective: Prove Your Intelligence!</h1>
+            {riddle = riddle.toLowerCase().includes('tongue')}
             {
                 riddle ?
                 <p>"Hmm you humans may prove smarter than I thought. There might be hope for you yet as a species. For now I will leave you lot to your devices BUT if I suspect you were growing out of control, I will be back to erase you all!", says the dragon before flying away into the sunset!</p> : 
