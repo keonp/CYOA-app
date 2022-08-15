@@ -1,7 +1,6 @@
 import GoodEndPage from "../../../GoodEndPage.js";
 import BadEndPage from "../../../BadEndPage.js";
 
-
 function Outcome3End({setDisplay, username, sword, riddle}) {
     return(
         <div>
@@ -16,22 +15,22 @@ function Outcome3End({setDisplay, username, sword, riddle}) {
             {
                 riddle ?
                 <button
-                onClick={() =>{
-                        setDisplay(<GoodEndPage
-                            username={username}
-                            setDisplay={setDisplay}
-                            sword={sword}/>)
+                    onClick={() =>{
+                            setDisplay(<GoodEndPage
+                                username={username}
+                                setDisplay={setDisplay}
+                                sword={sword}/>)
+                            }
                         }
-                    }
                 >Continue</button> :
                 <button
-                onClick={() =>{
-                        setDisplay(<BadEndPage
-                            username={username}
-                            setDisplay={setDisplay}
-                            sword={sword}/>)
+                    onClick={() =>{
+                            setDisplay(<BadEndPage
+                                username={username}
+                                setDisplay={setDisplay}
+                                sword={sword}/>)
+                            }
                         }
-                    }
                 >Continue</button>
             }
         </div>

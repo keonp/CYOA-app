@@ -9,11 +9,12 @@ function App() {
   // useState variable will hold components to be rendered on page
   const [display, setDisplay] = useState('');
   const [username, setUsername] = useState('');
+  const [userStats, updateUserStats] = useState({});
   const [sword, setSword] = useState(false);
   
   // useEffect will re-render the page once display(state) is updated
   useEffect(() => {
-
+    console.log(updateUserStats);
   }, [display]);
 
   const handleUsernameInput = (e) => {
@@ -27,6 +28,9 @@ function App() {
     push(dbRef, {username: userStats});
   }
 
+  // const updateUserStats = {};
+  
+
   return (
     <div className="App wrapper">
       {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
@@ -38,6 +42,7 @@ function App() {
             sword={sword}
             setSword={setSword}
             handleUsernameInput={handleUsernameInput}
+            updateUserStats={updateUserStats}
             addUser={addUser}
           />
       }

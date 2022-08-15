@@ -1,7 +1,7 @@
 import Sword from "./taskSword/Sword.js";
 import Challenge from "./finalChallenge/Challenge.js";
 
-function MainPage({setDisplay, username, sword, setSword, riddle, handleRiddleInput}){
+function MainPage({setDisplay, username, sword, setSword, updateUserStats}){
     return(
         <div>
             <h1>Main page</h1>
@@ -12,9 +12,9 @@ function MainPage({setDisplay, username, sword, setSword, riddle, handleRiddleIn
                             <p>Fantastic! now that you've acquired a <span className="dragonLongSword">{sword}</span>. With this, you'll be able take on the Dragon with ease. Best of luck <span className="username">{username}</span>!</p> :
                             <p>Ah! Is that a <span className="woodenSword">{sword}</span> you got there? Well, it's not my first choice for a weapon but I'm sure in your capable hands, it'll get the job done! Good luck <span className="username">{username}</span></p>
             }
-            <button onClick={() => setDisplay(<Sword setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)} disabled={sword}>Obtain A Sword</button>    
+            <button onClick={() => setDisplay(<Sword setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} updateUserStats={updateUserStats}/>)} disabled={sword}>Obtain A Sword</button>    
 
-            <button onClick={() => setDisplay(<Challenge setDisplay={setDisplay}  username={username} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)} disabled={!sword}>Challenge the Dragon!</button>                 
+            <button onClick={() => setDisplay(<Challenge setDisplay={setDisplay}  username={username} sword={sword} updateUserStats={updateUserStats}/>)} disabled={!sword}>Challenge the Dragon!</button>                 
         </div>
     )
 }
