@@ -1,5 +1,5 @@
 import firebase from './firebase.js';
-import { getDatabase, ref, push, get } from 'firebase/database';
+import { getDatabase, ref, push } from 'firebase/database';
 import UserStatsPage from "./UserStatsPage.js";
 
 function BadEndPage({setDisplay, username, sword, userStats}) {
@@ -9,20 +9,6 @@ function BadEndPage({setDisplay, username, sword, userStats}) {
         const dbRef = ref(database);
         push(dbRef, userStats);
     }
-
-    // const updateUserPage = () => {
-    //     const databaseArray = [];
-    //     const database = getDatabase(firebase);
-    //     const dbRef = ref(database);
-
-    //     get(dbRef).then(database => {
-    //         const databaseObj = database.val();
-    //         for (let key in databaseObj) {
-    //             databaseArray.push(databaseObj[key]);
-    //         }     
-    //     })
-    //     return databaseArray;
-    // }
 
     return(
         <div>

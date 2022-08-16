@@ -2,11 +2,11 @@ import IntroductionPage from './IntroductionPage.js';
 
 function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, addUser, userStats}) {
     return(
-        <div>
+        <div className='contentContainer'>
             <h1>Greetings!</h1>
-            <p>It's been some time since I've last seen you, young adventurer. Can you remind...what is your name again?</p>
-            <form>
-                <label htmlFor="name">Enter your [user]name</label>
+            <p className=''>It's been some time since I've last seen you, young adventurer. Can you remind...what is your name again?</p>
+            <form className='landingPageForm'>
+                <label htmlFor="name">Enter your username</label>
                 <input type="text" id="name" name="name" onChange={handleUsernameInput}/>
 
                 <button type="submit" onClick={() => {
