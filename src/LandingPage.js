@@ -2,7 +2,7 @@ import IntroductionPage from './IntroductionPage.js';
 // import Scenario2Outcome3 from './finalChallenge/ChallengeScenario2/Scenario2Outcome3/Scenario2Outcome3.js';
 
 
-function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, addUser, updateUserStats}) {
+function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, addUser, userStats}) {
     return(
         <div>
             <h1>Greetings!</h1>
@@ -12,14 +12,13 @@ function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput
                 <input type="text" id="name" name="name" onChange={handleUsernameInput}/>
 
                 <button type="submit" onClick={() => {
-                        updateUserStats({username: username});
-                        // updateUserStats.username = username;
+                        userStats.push(`Your name is ${username}!`);
                         setDisplay(<IntroductionPage
                             setDisplay={setDisplay}
                             username={username}
                             sword={sword}
                             setSword={setSword}
-                            updateUserStats={updateUserStats}
+                            userStats={userStats}
                             addUser={addUser}/>
                         )}
                     }

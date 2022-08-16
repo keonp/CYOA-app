@@ -1,7 +1,7 @@
 import ChallengeS1 from "./ChallengeScenario1/ChallengeS1.js";
 import ChallengeS2 from "./ChallengeScenario2/ChallengeS2.js";
 
-function Challenge({setDisplay, username, sword, riddle, handleRiddleInput}) {
+function Challenge({setDisplay, username, sword, riddle, handleRiddleInput, userStats}) {
     return (
         <div>
             <h1>Objective: Defeat the Dragon!</h1>
@@ -9,14 +9,16 @@ function Challenge({setDisplay, username, sword, riddle, handleRiddleInput}) {
             
             <button
                 onClick={() => {
-                    setDisplay(<ChallengeS1 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<ChallengeS1 username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
+                    userStats.push(`Pssh, the obvious signs of lightning didn't scare you, not when you have your trusty ${sword}!`)
                 }
             }
             >Pull out your <span className={sword === 'Dragon Long Sword' ? 'dragonLongSword' : 'woodenSword'}>{sword}</span>!</button>
 
             <button
                 onClick={() => {
-                    setDisplay(<ChallengeS2 username={username} setDisplay={setDisplay} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput}/>)
+                    setDisplay(<ChallengeS2 username={username} setDisplay={setDisplay} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput} userStats={userStats}/>)
+                    userStats.push(`Call it luck, call it instincts, but you dodged the dragon's lightning breath!`)
                 }
             }
             >Jump backwards!</button>

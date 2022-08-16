@@ -2,7 +2,7 @@ import SwordOption1 from "./swordOptions/SwordOption1.js";
 import SwordOption2 from "./swordOptions/SwordOption2.js";
 import SwordOption3 from "./swordOptions/SwordOption3.js";
 
-function Sword({setDisplay, username, sword, setSword, updateUserStats}) {
+function Sword({setDisplay, username, sword, setSword, userStats}) {
     return(
         <div>
             <h1>Objective: Obtain the Dragon Long Sword</h1>
@@ -11,9 +11,8 @@ function Sword({setDisplay, username, sword, setSword, updateUserStats}) {
             <button
                 onClick={() => {
                     setSword('Wooden Sword')
-                    // updateUserStats.sword = 'Wooden Sword';
-                    updateUserStats(...{sword: 'Wooden Sword'})
-                    setDisplay(<SwordOption1 username={username} setDisplay={setDisplay} updateUserStats={updateUserStats} sword='Wooden Sword'/>)
+                    userStats.push(`You acquired a Wooden Sword...`);
+                    setDisplay(<SwordOption1 username={username} setDisplay={setDisplay} userStats={userStats} sword='Wooden Sword'/>)
                     }
                 }
             > Gleeful</button>
@@ -22,7 +21,8 @@ function Sword({setDisplay, username, sword, setSword, updateUserStats}) {
             <button
                 onClick={() =>{
                     setSword('Dragon Long Sword')
-                    setDisplay(<SwordOption2 username={username} setDisplay={setDisplay} updateUserStats={updateUserStats} sword='Dragon Long Sword'/>)
+                    userStats.push(`You acquired a Dragon Long Sword!!`);
+                    setDisplay(<SwordOption2 username={username} setDisplay={setDisplay} userStats={userStats} sword='Dragon Long Sword'/>)
                     }
                 }
             >Doc</button>
@@ -30,7 +30,8 @@ function Sword({setDisplay, username, sword, setSword, updateUserStats}) {
             <button
                 onClick={() => {
                     setSword('Wooden Sword')
-                    setDisplay(<SwordOption3 username={username} setDisplay={setDisplay} updateUserStats={updateUserStats} sword='Wooden Sword'/>)
+                    userStats.push(`You acquired a Wooden Sword...`);
+                    setDisplay(<SwordOption3 username={username} setDisplay={setDisplay} userStats={userStats} sword='Wooden Sword'/>)
                     }
                 }
             >Smiley</button>

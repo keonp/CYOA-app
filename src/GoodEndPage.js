@@ -1,6 +1,15 @@
+import firebase from './firebase.js';
+import { getDatabase, ref, push } from 'firebase/database';
 import UserStatsPage from "./UserStatsPage.js";
 
-function GoodEndPage({setDisplay, username, sword}) {
+function GoodEndPage({setDisplay, username, sword, userStats}) {
+
+    const addUser = (userStats) => {
+        const database = getDatabase(firebase);
+        const dbRef = ref(database);
+        push(dbRef, userStats);
+    }
+
     return(
         <div>
             <h1>Congratulations <span className="username">{username}</span>!!</h1>
@@ -9,7 +18,9 @@ function GoodEndPage({setDisplay, username, sword}) {
 
             <button
             onClick={() =>{
-                    setDisplay(<UserStatsPage username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<UserStatsPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
+                    userStats.push(`Congratulations! You've succeeded in vanquishing the dragon!`)
+                    addUser(userStats)
                     }
                 }
             >User Stats</button>

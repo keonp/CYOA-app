@@ -1,6 +1,6 @@
 import BadEndPage from "../../../BadEndPage.js";
 
-function Scenario1Outcome2({setDisplay, username, sword}) {
+function Scenario1Outcome2({setDisplay, username, sword, userStats}) {
     return(
         <div>
             <h1>Objective: Say your prayers..</h1>
@@ -8,7 +8,8 @@ function Scenario1Outcome2({setDisplay, username, sword}) {
 
             <button
             onClick={() =>{
-                    setDisplay(<BadEndPage username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<BadEndPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
+                    userStats.push(`You were eaten whole!`)
                     }
                 }
             >Continue</button>

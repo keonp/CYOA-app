@@ -1,7 +1,7 @@
 import MainPage from "../../MainPage.js";
 import woodenSword from "../../assets/swords/wooden_sword.png";
 
-function SwordOption3({setDisplay, username, sword}) {
+function SwordOption3({setDisplay, username, sword, userStats}) {
     // let missingLetter;
     // function nameScrambled(username) {
     //     let newName = [...username];
@@ -26,7 +26,7 @@ function SwordOption3({setDisplay, username, sword}) {
             
             <button
                 onClick={() => {
-                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
                     }
                 }
             >Return to the Main page</button>

@@ -1,6 +1,4 @@
 import './App.css';
-import firebase from './firebase.js';
-import { getDatabase, ref, onValue, push, remove } from 'firebase/database';
 import React, { useState, useEffect } from 'react';
 import LandingPage from './LandingPage.js';
 
@@ -9,28 +7,19 @@ function App() {
   // useState variable will hold components to be rendered on page
   const [display, setDisplay] = useState('');
   const [username, setUsername] = useState('');
-  const [userStats, updateUserStats] = useState({});
   const [sword, setSword] = useState(false);
   
   // useEffect will re-render the page once display(state) is updated
   useEffect(() => {
-    console.log(updateUserStats);
+
   }, [display]);
 
   const handleUsernameInput = (e) => {
     setUsername(e.target.value || 'Player 1');
   }
 
-  const addUser = (userStats) => {
-    const database = getDatabase(firebase);
-    const dbRef = ref(database);
-    // const firebaseObj = push(dbRef, {username: useStats})
-    push(dbRef, {username: userStats});
-  }
-
-  // const updateUserStats = {};
+  const userStats = [];
   
-
   return (
     <div className="App wrapper">
       {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
@@ -42,8 +31,7 @@ function App() {
             sword={sword}
             setSword={setSword}
             handleUsernameInput={handleUsernameInput}
-            updateUserStats={updateUserStats}
-            addUser={addUser}
+            userStats={userStats}
           />
       }
       {/* {

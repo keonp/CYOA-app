@@ -1,7 +1,7 @@
 import Scenario2Outcome2 from "./Scenario2Outcome2/Scenario2Outcome2.js";
 import Scenario2Outcome3 from "./Scenario2Outcome3/Scenario2Outcome3.js";
 
-function ChallengeS2({setDisplay, username, sword, riddle, handleRiddleInput}) {
+function ChallengeS2({setDisplay, username, sword, riddle, handleRiddleInput, userStats}) {
     return (
         <div>
             <h1>Objective: Defeat the Dragon!</h1>
@@ -16,15 +16,15 @@ function ChallengeS2({setDisplay, username, sword, riddle, handleRiddleInput}) {
 
             <p>The dragon snarls and says, "Why?! You humans lay waste to your environment and disrupt the state of nature! Your little livestock emit methane in quantities so large that it warms the planet's temperature dramatically! You are at constant war with one another and are bent on making sure you are the dominant species in a world with many other intelligent species! What I do to you people is a service really...you should be thanking me. Your arrogance and lack of intelligence will forever prove your undoing, human.</p>
 
-            {/* <button>Draw your <span className={sword === 'Dragon Long Sword' ? 'dragonLongSword' : 'woodenSword'}>{sword}</span></button> */}
-
             <button 
                 onClick={() => {
                     setDisplay(<Scenario2Outcome2
                         username={username}
                         setDisplay={setDisplay}
                         sword={sword}
+                        userStats={userStats}
                     />)
+                    userStats.push(`Time for a science lesson, you inquire about far-- erm Methane!`)
                 }}
             >Wait, what's methane?</button>
 
@@ -36,7 +36,9 @@ function ChallengeS2({setDisplay, username, sword, riddle, handleRiddleInput}) {
                         sword={sword}
                         riddle={riddle}
                         handleRiddleInput={handleRiddleInput}
+                        userStats={userStats}
                     />)
+                    userStats.push(`You've decided to throw down in a battle of wits!`)
                 }}
             >We can be smart too!</button>
             

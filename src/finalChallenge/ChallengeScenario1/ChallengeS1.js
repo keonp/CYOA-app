@@ -2,7 +2,7 @@ import Scenario1Outcome1 from "./Scenario1Outcome1/Scenario1Outcome1.js";
 import Scenario1Outcome2 from "./Scenario1Outcome2/Scenario1Outcome2.js";
 
 
-function ChallengeS1({setDisplay, username, sword}) {
+function ChallengeS1({setDisplay, username, sword, userStats}) {
     return(
         <div>
             <h1>Objective: Defeat the Dragon!</h1>
@@ -17,13 +17,15 @@ function ChallengeS1({setDisplay, username, sword}) {
                 sword === 'Dragon Long Sword' ?
                 
                 <button onClick={() => {
-                    setDisplay(<Scenario1Outcome1 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<Scenario1Outcome1 username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
+                    userStats.push(`These feeble attacks mean nothing againts a ${sword}! You parried lightning!`)
                 }}
                 >Charge with your sword!</button> :
                 
                 <button
                 onClick={() =>{
-                    setDisplay(<Scenario1Outcome2 username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<Scenario1Outcome2 username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
+                    userStats.push(`Alas, your ${sword} was blown up and you were electricuted!`)
                     }
                 }
                 >I can't feel my legs...</button>  

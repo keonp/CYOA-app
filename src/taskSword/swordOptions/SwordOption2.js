@@ -1,7 +1,7 @@
 import MainPage from "../../MainPage.js";
 import dragonLongSword from "../../assets/swords/dragon_longsword.png";
 
-function SwordOption2({setDisplay, username, sword}) {
+function SwordOption2({setDisplay, username, sword, userStats}) {
     return (
         <div>
             <h1>Objective: Obtain the Dragon Long Sword</h1>
@@ -14,7 +14,7 @@ function SwordOption2({setDisplay, username, sword}) {
             <button
                 onClick={() => {
                     
-                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
                     }
                 }
             >Return to the Main page</button>

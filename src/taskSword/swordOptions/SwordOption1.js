@@ -3,7 +3,7 @@ import woodenSword from "../../assets/swords/wooden_sword.png";
 
 
 
-function SwordOption1({setDisplay, username, sword}) {
+function SwordOption1({setDisplay, username, sword, userStats}) {
     
     return(
         <div>
@@ -17,7 +17,7 @@ function SwordOption1({setDisplay, username, sword}) {
             
             <button
                 onClick={() => {
-                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
                     }
                 }
             >Return to the Main page</button>

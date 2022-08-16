@@ -1,6 +1,6 @@
 import GoodEndPage from "../../../GoodEndPage.js";
 
-function Scenario1Outcome1({setDisplay, username, sword}) {
+function Scenario1Outcome1({setDisplay, username, sword, userStats}) {
     return(
         <div>
             <h1>Objective: FIGHT ON!</h1>
@@ -8,7 +8,9 @@ function Scenario1Outcome1({setDisplay, username, sword}) {
             <p>It wails while in it's death throes! Twisting and kicking up dust before it eventually lies still...</p>
             <button
             onClick={() =>{
-                    setDisplay(<GoodEndPage username={username} setDisplay={setDisplay} sword={sword}/>)
+                    setDisplay(<GoodEndPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
+                    userStats.push(`Oh my god! You gut the dragon like you were cutting bread!`)
+                    userStats.push(`You've earned the moniker: Dragon Slayer ${username}!`)
                     }
                 }
             >Continue</button>

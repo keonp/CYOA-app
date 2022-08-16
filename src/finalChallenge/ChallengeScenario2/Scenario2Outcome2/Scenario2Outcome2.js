@@ -1,6 +1,6 @@
-import Outcome2End from "../../ChallengeScenario1/Scenario1Outcome2/Outcome2End.js";
+import Outcome2End from "../Scenario2Outcome1/Outcome2End.js";
 
-function Scenario2Outcome2({setDisplay, username, sword}) {
+function Scenario2Outcome2({setDisplay, username, sword, userStats}) {
     return(
         <div>
             <h1>Objective: Methane?</h1>
@@ -14,13 +14,15 @@ function Scenario2Outcome2({setDisplay, username, sword}) {
 
                 <button
                     onClick={() => {
-                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword}/>)
+                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
+                        userStats.push(`You don't let the opporunity go to waste! You go for a sneak attack!`)
                     }}
                 >Lunge with your <span className="dragonLongSword">{sword}</span> </button> :
 
                 <button 
                     onClick={() => {
-                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword}/>)
+                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
+                        userStats.push(`Hubris has led you to believe you can pierce the dragon's stomach with a ${sword}!`)
                     }}
                 >Lunge with your <span className="woodenSword">{sword}</span> </button>
             }
