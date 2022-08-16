@@ -10,19 +10,19 @@ function BadEndPage({setDisplay, username, sword, userStats}) {
         push(dbRef, userStats);
     }
 
-    const updateUserPage = () => {
-        const databaseArray = [];
-        const database = getDatabase(firebase);
-        const dbRef = ref(database);
+    // const updateUserPage = () => {
+    //     const databaseArray = [];
+    //     const database = getDatabase(firebase);
+    //     const dbRef = ref(database);
 
-        get(dbRef).then(database => {
-            const databaseObj = database.val();
-            for (let key in databaseObj) {
-                databaseArray.push(databaseObj[key]);
-            }     
-        })
-        return databaseArray;
-    }
+    //     get(dbRef).then(database => {
+    //         const databaseObj = database.val();
+    //         for (let key in databaseObj) {
+    //             databaseArray.push(databaseObj[key]);
+    //         }     
+    //     })
+    //     return databaseArray;
+    // }
 
     return(
         <div>

@@ -40,6 +40,26 @@ img {
     font-weight: bold;
 }
 
+.adventureContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logContainer {
+    width: calc((100% / 3) - 20px);
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.adventureTask {
+    margin: 10px 0;
+}
+
+h1 {
+    text-align: center;
+}
+
 h1,
 p,
 input,

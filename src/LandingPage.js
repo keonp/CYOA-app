@@ -1,6 +1,4 @@
 import IntroductionPage from './IntroductionPage.js';
-import UserStatsPage from './UserStatsPage.js';
-
 
 function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, addUser, userStats}) {
     return(
@@ -13,7 +11,7 @@ function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput
 
                 <button type="submit" onClick={() => {
                         userStats.push(`Your name is ${username}!`);
-                        setDisplay(<UserStatsPage
+                        setDisplay(<IntroductionPage
                             setDisplay={setDisplay}
                             username={username}
                             sword={sword}

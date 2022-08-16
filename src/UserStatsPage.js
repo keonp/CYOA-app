@@ -1,37 +1,45 @@
 import firebase from './firebase.js';
-import { getDatabase, ref, get } from 'firebase/database';
+import { getDatabase, ref, get} from 'firebase/database';
+import { useState, useEffect } from 'react';
 
 function UserStatsPage() {
-    
+    const [fDatabase, updatefDatabase] = useState([]);
 
-    function updateUserPage() {
+    useEffect(() => {
         const database = getDatabase(firebase);
         const dbRef = ref(database);
 
         get(dbRef).then(database => {
+            const array = [];
             const databaseObj = database.val();
+
             for (let key in databaseObj) {
-                const array = databaseObj[key];
-                // console.log(databaseObj[key])
-                array.map(userEvent => {
-                    return (
-                        <div>
-                            <li>{userEvent}</li>
-                        </div>
-                    )
-                })
-            }     
+                array.push(databaseObj[key]);
+            }
+            updatefDatabase(array); 
         })
-    }
-    // const dataArray = updateUserPage();
-    // console.log(dataArray);
-   
+    }, [])
 
     return(
         <div>
+            <h1>Player Adventure Logs</h1>
+            <div className='adventureContainer'>
             {
-                updateUserPage()
+                fDatabase.map((adventure) => {
+                    return(
+                        <div className='logContainer'>
+                            {
+                                adventure.map(adventureTask => {
+                                    return (
+                                        <p className='adventureTask'>{adventureTask}</p>
+                                    )
+                                })
+                            }
+                        </div>
+                    )
+                })
             }
+            </div>
 
         </div>
     )
