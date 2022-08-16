@@ -22,19 +22,20 @@ function App() {
   
   return (
     <div className="App wrapper">
-      {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
-      {
-        display ||
-        <LandingPage
-            setDisplay={setDisplay}
-            username={username}
-            sword={sword}
-            setSword={setSword}
-            handleUsernameInput={handleUsernameInput}
-            userStats={userStats}
-          />
-      }
-    </div>
+      
+        {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
+        {
+          display ||
+          <LandingPage
+              setDisplay={setDisplay}
+              username={username}
+              sword={sword}
+              setSword={setSword}
+              handleUsernameInput={handleUsernameInput}
+              userStats={userStats}
+            />
+        }
+      </div>
   );
 }
 

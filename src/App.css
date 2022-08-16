@@ -23,6 +23,11 @@ button {
     font-family: 'Silkscreen', cursive;
 }
 
+.contentContainer > * {
+    margin: 10px 0;
+    width: 650px;
+}
+
 button {
     cursor: pointer;
     background-color: #60a6df;
@@ -54,7 +59,6 @@ button:focus {
     color: white;
 }
 
-
 h1,
 p,
 input,
@@ -68,7 +72,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    
 }
 
 .wrapper {
@@ -78,12 +82,25 @@ body {
 }
 
 img {
-    width: 100%;
+    max-width: 100px;
     display: block;
 }
 
 .imageContainer {
-    width: 100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.woodenSwordContainer {
+    background-image: url('./assets/swords/stinky-lines.gif');
+    background-position: center;
+    /* background-size: cover; */
+    background-size: 210%;
+    background-repeat: no-repeat;
 }
 
 .username {
@@ -93,7 +110,7 @@ img {
 }
 
 .woodenSword {
-    color: #58bee0;
+    color: #0c7222;
     font-weight: bold;
 }
 
@@ -102,9 +119,15 @@ img {
     font-weight: bold;
 }
 
+.displayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
 .contentContainer {
-    margin: 50px 0;
-    padding: 0 10px;
+    /* margin: 50px 0;
+    padding: 50px 10px; */
     border: 3px solid black;
     min-height: 450px;
     display: flex;
@@ -113,10 +136,6 @@ img {
     background-color: rgba(255, 255, 255, 0.555);
     text-align: center;
     overflow-wrap: break-word;
-}
-.contentContainer > * {
-    margin: 10px 0;
-    width: 650px;
 }
 
 .landingPageForm {
@@ -151,24 +170,34 @@ input {
 }
 
 @media(max-width: 750px) {
-    .contentContainer > * {
+    .contentContainer > *:not(.imageContainer) {
         margin: 10px 0;
         width: 100%;
     }
 }
 
-@media(max-width: 455px) {
-    body {
+@media(max-width: 420px) {
+    input {
+        width: 95%;
+    }
+}
+/* Introduction page media query */
+@media(max-width: 341px) {
+    .displayContainer.introductionPageContainer {
         height: auto;
     }
 }
 
-@media(max-width: 420px) {
-    input {
-        width: 100%;
+/* Sword page media query */
+@media(max-width: 485px) {
+    .displayContainer.SwordPageContainer {
+        height: auto;
     }
+}
 
-    body {
+/* SwordOption1 page media query */
+@media(max-width: 475px) {
+    .displayContainer.SwordOption1Container {
         height: auto;
     }
 }

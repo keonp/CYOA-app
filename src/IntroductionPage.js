@@ -3,7 +3,7 @@ import MainPage from './MainPage.js';
 // Add firebase functionality
 function IntroductionPage({setDisplay, username, sword, setSword, handleRiddleInput, userStats}) {
     return(
-        // <div>
+        <div className='displayContainer introductionPageContainer'>
             <div className='contentContainer'>
                 <h1>Introduction</h1>
                 <p>Ah yes! It's been so long, <span className='username'>{username}</span>. I hardly recognized you.</p>
@@ -14,7 +14,7 @@ function IntroductionPage({setDisplay, username, sword, setSword, handleRiddleIn
                 <button onClick={() => setDisplay(<MainPage setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} handleRiddleInput={handleRiddleInput} userStats={userStats}/>)}>Sure</button>
                 <button onClick={() => setDisplay(<MainPage setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} handleRiddleInput={handleRiddleInput} userStats={userStats}/>)}>Heck Yea!</button>
             </div>
-        // </div>
+        </div>
     )
 }
 
