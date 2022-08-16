@@ -1,5 +1,5 @@
 import IntroductionPage from './IntroductionPage.js';
-// import Scenario2Outcome3 from './finalChallenge/ChallengeScenario2/Scenario2Outcome3/Scenario2Outcome3.js';
+import UserStatsPage from './UserStatsPage.js';
 
 
 function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput, addUser, userStats}) {
@@ -13,7 +13,7 @@ function LandingPage({setDisplay, username, sword, setSword, handleUsernameInput
 
                 <button type="submit" onClick={() => {
                         userStats.push(`Your name is ${username}!`);
-                        setDisplay(<IntroductionPage
+                        setDisplay(<UserStatsPage
                             setDisplay={setDisplay}
                             username={username}
                             sword={sword}

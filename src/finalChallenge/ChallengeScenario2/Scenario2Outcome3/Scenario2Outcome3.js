@@ -1,7 +1,7 @@
 import Outcome3End from "./Outcome3End.js";
 import { useState } from 'react';
 
-function Scenario2Outcome3({setDisplay, username, sword}) {
+function Scenario2Outcome3({setDisplay, username, sword, userStats}) {
     const [riddle, setRiddle] = useState('');
     
     const handleRiddleInput = (e) => {
@@ -20,8 +20,9 @@ function Scenario2Outcome3({setDisplay, username, sword}) {
                 <input type="text" id="question" name="question" onChange={handleRiddleInput}/>
 
                 <button type="submit"
-                    onClick={() =>
-                        setDisplay(<Outcome3End setDisplay={setDisplay} username={username} sword={sword} riddle={riddle}/>)
+                    onClick={() => {
+                        setDisplay(<Outcome3End setDisplay={setDisplay} username={username} sword={sword} riddle={riddle} userStats={userStats}/>)
+                        }
                     }
                 >Confirm</button>
             </form>

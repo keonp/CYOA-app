@@ -34,19 +34,6 @@ function App() {
             userStats={userStats}
           />
       }
-      {/* {
-        display ||
-        <LandingPage
-            setDisplay={setDisplay}
-            username={username}
-            sword={sword}
-            setSword={setSword}
-            riddle={riddle}
-            handleRiddleInput={handleRiddleInput}
-            handleUsernameInput={handleUsernameInput}
-            addUser={addUser}
-          />
-      } */}
     </div>
   );
 }
