@@ -1,35 +1,31 @@
-import Outcome2End from "../Scenario2Outcome1/Outcome2End.js";
+import Outcome2End from "./Outcome2End.js";
+import { useState } from 'react';
 
 function Scenario2Outcome2({setDisplay, username, sword, userStats}) {
+    const [riddle, setRiddle] = useState('');
+    
+    const handleRiddleInput = (e) => {
+        setRiddle(e.target.value);
+    }
+
     return(
         <div>
-            <h1>Objective: Methane?</h1>
-            <p>"Wait...What's methane?" You inquire</p>
-            <p>The dragon takes pause for a moment, looking you up and down before letting out a long groan and raising it's head as if to be thinking.</p>
-            <p>"Well, a colourless odorless flammable gaseous hydrocarbon CH<sub>4</sub> that is a product of biological decomposition of organic matter and of the carbonization of coal, is used as a fuel and as a starting material in chemical syn-"</p>
-            <p>While the dragon goes on answering your question you sneak out of its view, get close to it's soft underbelly and...</p>
-            
-            {
-                sword === 'Dragon Long Sword' ?
+            <h1>Objective: Prove Your Intelligence!</h1>
+            <p>"Hey now! some humans are smart, there's no need to make a sweeping generalization!" You exclaim</p>
+            <p>The dragon's roars turn to laughter...</p>
+            <p>"Listen human, I've known 5 intelligent humans and they were all burned at the stake for being witches...but they were merely herbalists! But if you think you can be the 6th, then I'll reconsider your ENTIRE species as a whole and cease my terror", says the dragon.</p>
+            <h3>Riddle me this...</h3>
+            <form>
+                <label htmlFor="question">"I taste better than I smell. What am I?"</label>
+                <input type="text" id="question" name="question" onChange={handleRiddleInput}/>
 
-                <button
+                <button type="submit"
                     onClick={() => {
-                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
-                        userStats.push(`You don't let the opporunity go to waste! You go for a sneak attack!`)
-                    }}
-                >Lunge with your <span className="dragonLongSword">{sword}</span> </button> :
-
-                <button 
-                    onClick={() => {
-                        setDisplay(<Outcome2End username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
-                        userStats.push(`Hubris has led you to believe you can pierce the dragon's stomach with a ${sword}!`)
-                    }}
-                >Lunge with your <span className="woodenSword">{sword}</span> </button>
-            }
-
-
-        
-
+                        setDisplay(<Outcome2End setDisplay={setDisplay} username={username} sword={sword} riddle={riddle} userStats={userStats}/>)
+                        }
+                    }
+                >Confirm</button>
+            </form>
         </div>
     )
 }

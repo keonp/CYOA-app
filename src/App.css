@@ -95,16 +95,24 @@ img {
     align-items: center;
 }
 
-.woodenSwordContainer {
-    background-image: url('./assets/swords/stinky-lines.gif');
+.woodenSwordContainer,
+.dLongSwordContainer {
     background-position: center;
-    /* background-size: cover; */
-    background-size: 210%;
     background-repeat: no-repeat;
 }
 
+.woodenSwordContainer {
+    background-image: url('./assets/swords/stinky-lines.gif');
+    background-size: 210%;
+}
+
+.dLongSwordContainer {
+    background-image: url('./assets/swords/blazing-fire.gif');
+    background-size: 103%;
+}
+
 .username {
-    color: rgb(175, 13, 145);
+    color: #af0d91;
     /* color: #d3b924; */
     font-weight: bold;
 }
@@ -164,6 +172,10 @@ img {
     margin: 10px 0;
 }
 
+.displayContainer.ChallengesS2Container {
+    height: auto;
+}
+
 input {
     padding: 10px 20px;
     text-align: center;
@@ -198,6 +210,27 @@ input {
 /* SwordOption1 page media query */
 @media(max-width: 475px) {
     .displayContainer.SwordOption1Container {
+        height: auto;
+    }
+}
+
+/* Challenge page media query */
+@media(max-width: 494px) {
+    .displayContainer.ChallengePageContainer {
+        height: auto;
+    }
+}
+
+/* Challenge option 1 page media query */
+@media(max-width: 364px) {
+    .displayContainer.ChallengesS1Container {
+        height: auto;
+    }
+}
+
+/* Challenge option 2, scenario 1 outcome media query */
+@media(max-width: 445px) {
+    .displayContainer.Scenario2Outcome1 {
         height: auto;
     }
 }
