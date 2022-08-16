@@ -21,20 +21,24 @@ function UserStatsPage() {
     }, [])
 
     return(
-        <div>
+        <div className='userStatsContainer'>
             <h1>Player Adventure Logs</h1>
             <div className='adventureContainer'>
             {
-                fDatabase.map((adventure) => {
+                fDatabase.map((adventure, key) => {
                     return(
-                        <div className='logContainer'>
-                            {
-                                adventure.map(adventureTask => {
-                                    return (
-                                        <p className='adventureTask'>{adventureTask}</p>
-                                    )
-                                })
-                            }
+                        <div className='logContainer' key={key}>
+                            <ol>
+                                {
+                                    adventure.map((adventureTask, index) => {
+                                        return (
+                                            <li key={index}>
+                                                <p className='adventureTask'>{adventureTask}</p>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ol>
                         </div>
                     )
                 })

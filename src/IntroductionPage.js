@@ -11,8 +11,27 @@ function IntroductionPage({setDisplay, username, sword, setSword, handleRiddleIn
                 <p>I hate to be a burden, but do you think you could help us by slaying the dragon? If you don't have the necessary equipment, I can tell you where to go to get what you need</p>
                 <p>What do you say?</p>
 
-                <button onClick={() => setDisplay(<MainPage setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} handleRiddleInput={handleRiddleInput} userStats={userStats}/>)}>Sure</button>
-                <button onClick={() => setDisplay(<MainPage setDisplay={setDisplay} username={username} sword={sword} setSword={setSword} handleRiddleInput={handleRiddleInput} userStats={userStats}/>)}>Heck Yea!</button>
+                <button onClick={() => 
+                    setDisplay(<MainPage
+                    setDisplay={setDisplay}
+                    username={username}
+                    sword={sword}
+                    setSword={setSword}
+                    handleRiddleInput={handleRiddleInput}
+                    userStats={userStats}/>
+                    )}
+                >Sure</button>
+
+                <button onClick={() => 
+                    setDisplay(<MainPage
+                    setDisplay={setDisplay}
+                    username={username}
+                    sword={sword}
+                    setSword={setSword}
+                    handleRiddleInput={handleRiddleInput}
+                    userStats={userStats}/>
+                    )}
+                >Heck Yea!</button>
             </div>
         </div>
     )

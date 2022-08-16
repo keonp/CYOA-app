@@ -11,7 +11,11 @@ function Challenge({setDisplay, username, sword, riddle, handleRiddleInput, user
                 
                 <button
                     onClick={() => {
-                        setDisplay(<ChallengeS1 username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
+                        setDisplay(<ChallengeS1
+                            username={username}
+                            setDisplay={setDisplay}
+                            sword={sword}
+                            userStats={userStats}/>)
                         userStats.push(`Pssh, the obvious signs of lightning didn't scare you, not when you have your trusty ${sword}!`)
                     }
                 }
@@ -19,11 +23,18 @@ function Challenge({setDisplay, username, sword, riddle, handleRiddleInput, user
 
                 <button
                     onClick={() => {
-                        setDisplay(<ChallengeS2 username={username} setDisplay={setDisplay} sword={sword} riddle={riddle} handleRiddleInput={handleRiddleInput} userStats={userStats}/>)
+                        setDisplay(<ChallengeS2
+                            username={username}
+                            setDisplay={setDisplay}
+                            sword={sword}
+                            riddle={riddle}
+                            handleRiddleInput={handleRiddleInput}
+                            userStats={userStats}/>)
                         userStats.push(`Call it luck, call it instincts, but you dodged the dragon's lightning breath!`)
                     }
                 }
                 >Jump backwards!</button>
+                
             </div>
         </div>
     )
