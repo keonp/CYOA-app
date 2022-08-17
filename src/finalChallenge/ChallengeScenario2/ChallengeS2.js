@@ -6,7 +6,7 @@ function ChallengeS2({setDisplay, username, sword, riddle, handleRiddleInput, us
         <div className='displayContainer ChallengesS2Container'>
             <div className='contentContainer'>
                 <h1>Objective: Defeat the Dragon!</h1>
-                <p>A bolt of lightning pours down a couple of meters in front of you, in the spot you were just standing. You hear a chest-rattling roar from the sky and see the clouds part as a dragon spills out breathing lightning bolts in every direction, destroying the terrain around you!</p>
+                <p>A bolt of lightning pours down a couple of meters onto the spot you were just standing. You hear a chest-rattling roar from the sky and see the clouds part as a dragon spills out breathing lightning bolts in every direction, destroying the terrain around you!</p>
 
                 {
                     sword === 'Wooden Sword' ?

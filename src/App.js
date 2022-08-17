@@ -14,6 +14,7 @@ function App() {
 
   }, [display]);
 
+  // Will record the user's input and in the event they they don't enter a name or click the box and don't enter a name, will receive the username 'Player 1'
   const handleUsernameInput = (e) => {
     setUsername(e.target.value || 'Player 1');
   }
@@ -21,9 +22,10 @@ function App() {
   const userStats = [];
   
   return (
-    <div className="App wrapper">
-      
-        {/* Inialize content thats returned. Display is initially falsy and therefore LandingPage will render on first page load */}
+    <div>
+      <div className="App wrapper">
+        {/* Inialize content that's returned. Display is initially falsy and therefore LandingPage will render on first page load */}
+
         {
           display ||
           <LandingPage
@@ -36,6 +38,10 @@ function App() {
             />
         }
       </div>
+      <footer>
+          <p className='footerText wrapper'>Made at <a href='https://junocollege.com/' target="_blank" rel="noreferrer">Juno College</a></p>
+      </footer>
+    </div>
   );
 }
 

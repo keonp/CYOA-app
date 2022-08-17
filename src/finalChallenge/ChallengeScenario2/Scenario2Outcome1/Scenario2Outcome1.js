@@ -6,9 +6,9 @@ function Scenario2Outcome1({setDisplay, username, sword, userStats}) {
             <div className='contentContainer'>
                 <h1>Objective: Methane?</h1>
                 <p>"Wait...What's methane?" You inquire</p>
-                <p>The dragon takes pause for a moment, looking you up and down before letting out a long groan and raising it's head as if to be thinking.</p>
+                <p>The dragon takes pause for a moment, looking you up and down before letting out a long groan and raising its head as if to be thinking.</p>
                 <p>"Well, a colourless odorless flammable gaseous hydrocarbon CH<sub>4</sub> that is a product of biological decomposition of organic matter and of the carbonization of coal, is used as a fuel and as a starting material in chemical syn-"</p>
-                <p>While the dragon goes on answering your question you sneak out of its view, get close to it's soft underbelly and...</p>
+                <p>While the dragon goes on answering your question you sneak out of its view, get close to its soft underbelly, and...</p>
                 
                 {
                     sword === 'Dragon Long Sword' ?

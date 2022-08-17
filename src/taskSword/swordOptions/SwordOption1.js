@@ -1,8 +1,6 @@
 import MainPage from "../../MainPage.js";
 import woodenSword from "../../assets/swords/wooden_sword.png";
 
-
-
 function SwordOption1({setDisplay, username, sword, userStats}) {
     
     return(

@@ -15,7 +15,13 @@ h1 {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 h1,
+h3,
 p,
 li,
 label,
@@ -168,8 +174,6 @@ img {
     width: calc((100% / 3) - 20px);
     margin: 10px;
     padding: 5px;
-    /* border: 3px solid black; */
-    /* border: 3px solid #BE9240; */
     border: 3px solid #d6a241;
     background-image: url('./assets/background/parchment-paper-background.jpg');
 }
@@ -180,6 +184,18 @@ img {
 
 .displayContainer.ChallengesS2Container {
     height: auto;
+}
+
+footer {
+    background-color: grey;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerText {
+    text-align: center;
 }
 
 input {
