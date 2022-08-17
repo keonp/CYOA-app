@@ -28,7 +28,7 @@ function SwordOption3({setDisplay, username, sword, userStats}) {
                 
                 <button
                     onClick={() => {
-                        setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats} />)
+                        setDisplay(<MainPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
                         }
                     }
                 >Return to the Main page</button>
