@@ -11,7 +11,7 @@ function Scenario1Outcome2({setDisplay, username, sword, userStats}) {
                 onClick={() =>{
                         setDisplay(<BadEndPage username={username} setDisplay={setDisplay} sword={sword} userStats={userStats}/>)
                         userStats.push(`You were eaten whole!`)
-                        userStats.push(`You've earned the moniker: Fresh Meat ${username}!`)
+                        userStats.push(`You've earned the moniker: Lunch Meat ${username}!`)
                         }
                     }
                 >Continue</button>
