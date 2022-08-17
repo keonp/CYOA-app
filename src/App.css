@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+    font-size: 125%;
+    font-family: 'Silkscreen', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,
+h3,
+p,
+li,
+label,
+input,
+button {
+    font-family: 'Silkscreen', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.contentContainer > * {
+    margin: 10px 0;
+    width: 650px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    cursor: pointer;
+    background-color: #60a6df;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #60a6df;
+    letter-spacing: 0.8px;
+    transition: 0.25s;
+    max-width: 210px;
+}
+
+button:hover,
+button:focus {
+    background-color: #538fc0;
+    color: black;
+}
+
+.disabledButton {
+    cursor: default;
+    background-color: grey;
+    color: white;
+    border: 1px solid grey;
+}
+
+.disabledButton:hover,
+.disabledButton:focus {
+    background-color: grey;
+    color: white;
+}
+
+h1,
+p,
+input,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./assets/background/body-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+img {
+    max-width: 100px;
+    display: block;
+}
+
+.imageContainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.woodenSwordContainer,
+.dLongSwordContainer {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.woodenSwordContainer {
+    background-image: url('./assets/swords/stinky-lines.gif');
+    background-size: 210%;
+}
+
+.dLongSwordContainer {
+    background-image: url('./assets/swords/blazing-fire.gif');
+    background-size: 103%;
+}
+
+.username {
+    color: #af0d91;
+    font-weight: bold;
+}
+
+.woodenSword {
+    color: #0c7222;
+    font-weight: bold;
+}
+
+.dragonLongSword {
+    color: #800000;
+    font-weight: bold;
+}
+
+.displayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+.contentContainer {
+    border: 3px solid black;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.555);
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.userStatsContainer {
+    overflow-wrap: break-word;
+    height: auto;
+}
+
+.landingPageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landingPageForm > * {
+    margin: 30px 0;
+}
+
+.adventureContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logContainer {
+    width: calc((100% / 3) - 20px);
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid #d6a241;
+    background-image: url('./assets/background/parchment-paper-background.jpg');
+}
+
+.adventureTask {
+    margin: 10px 0;
+}
+
+.displayContainer.ChallengesS2Container {
+    height: auto;
+}
+
+footer {
+    background-color: grey;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footerText {
+    text-align: center;
+}
+
+input {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+@media(max-width: 750px) {
+    .contentContainer > *:not(.imageContainer) {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+@media(max-width: 420px) {
+    input {
+        width: 95%;
+    }
+}
+/* Introduction page media query */
+@media(max-width: 341px) {
+    .displayContainer.introductionPageContainer {
+        height: auto;
+    }
+}
+
+/* Sword page media query */
+@media(max-width: 485px) {
+    .displayContainer.SwordPageContainer {
+        height: auto;
+    }
+}
+
+/* SwordOption1 page media query */
+@media(max-width: 475px) {
+    .displayContainer.SwordOption1Container {
+        height: auto;
+    }
+}
+
+/* Challenge page media query */
+@media(max-width: 494px) {
+    .displayContainer.ChallengePageContainer {
+        height: auto;
+    }
+}
+
+/* Challenge option 1 page media query */
+@media(max-width: 364px) {
+    .displayContainer.ChallengesS1Container {
+        height: auto;
+    }
+}
+
+/* Challenge option 2, scenario 1 outcome media query */
+@media(max-width: 445px) {
+    .displayContainer.Scenario2Outcome1 {
+        height: auto;
+    }
+}
+
+/* Challenge option 2, scenario 1 outcome media query */
+@media(max-width: 420px) {
+    .displayContainer.Scenario2Outcome2 {
+        height: auto;
+    }
+}
+
+@media(max-width: 582px) {
+    .riddleForm > *{
+        width: 95%;
+        margin: 5px 0;
+    }
+
+    .riddleForm button {
+        max-width: unset;
+    }
+}
+
+@media(max-width: 1010px) {
+    .logContainer {
+        width: calc((100% / 2) - 20px);
+    }
+}
+
+@media(max-width: 665px) {
+    .logContainer {
+        width: calc(100%  - 20px);
+    }
 }
