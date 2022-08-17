@@ -39,7 +39,7 @@ function App() {
         }
       </div>
       <footer>
-          <p className='footerText wrapper'>Made at <a href='https://junocollege.com/' target="_blank" rel="noreferrer">Juno College</a></p>
+          <p className='footerText wrapper'>Created at <a href='https://junocollege.com/' target="_blank" rel="noreferrer">Juno College</a></p>
       </footer>
     </div>
   );
